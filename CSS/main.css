@@ -1,12 +1,3 @@
-@charset "utf-8";
-@font-face {
-  font-family: "SUIT-Regular";
-  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Regular.woff2")
-    format("woff2");
-  font-weight: normal;
-  font-style: normal;
-}
-
 @font-face {
   font-family: "RIDIBatang";
   src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/RIDIBatang.woff")
@@ -21,16 +12,12 @@
   font-weight: normal;
   font-style: normal;
 }
-body {
-  font-family: "SUIT-Regular", sans-serif;
-  font-size: 16px;
-}
-.inner {
-  width: 100%;
-  max-width: 800px;
-  margin: 0 auto;
-  text-align: justify;
-  line-height: calc(16px * 1.5);
+@font-face {
+  font-family: "Pretendard-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+    format("woff");
+  font-weight: 400;
+  font-style: normal;
 }
 html {
   scroll-behavior: smooth;
@@ -44,6 +31,7 @@ body {
   background-attachment: fixed;
   overflow-y: overlay;
 }
+
 /* 스크롤바 */
 body::-webkit-scrollbar {
   width: 15px;
@@ -141,6 +129,21 @@ header .nav-toggle {
   border-radius: 30px;
   box-shadow: 9px 9px 18px rgba(0, 0, 0, 0.2);
 }
+.inner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(
+    135deg,
+    var(--grdient2-color),
+    var(--gradient3-color)
+  );
+  opacity: 0.15;
+  z-index: -1;
+}
 
 section.chapter > * {
   padding: 0.7rem 0;
@@ -156,6 +159,59 @@ section.chapter > * {
 .session_card {
   max-height: 600px;
   margin-bottom: 0.3rem;
+}
+
+/* 채팅 */
+.chat {
+  display: flex;
+  align-items: flex-start;
+}
+
+.portrait {
+  width: 45px;
+  height: 45px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+p.GM .portrait {
+  background: url(../img/sprite.png) 0px 0px;
+}
+p.do-hyeon .portrait {
+  background: url(../img/sprite.png) -45px 0px;
+}
+p.luna .portrait {
+  background: url(../img/sprite.png) calc(-45px * 2) 0px;
+}
+p.nene .portrait {
+  background: url(../img/sprite.png) calc(-45px * 3) 0px;
+}
+p.polus-thirty .portrait {
+  background: url(../img/sprite.png) calc(-45px * 4) 0px;
+}
+
+.name {
+  font-weight: bold;
+  white-space: nowrap;
+  display: block;
+  color: var(--secondary-color);
+}
+
+span.line {
+  text-align: justify;
+  line-height: 1.3;
+}
+.line em {
+  font-weight: bold;
+  color: var(--primary-color);
+}
+.line > span {
+  display: block;
+  margin-bottom: 0.5em;
+}
+.line > span:last-child {
+  margin-bottom: 0;
 }
 
 /* 음악 */
@@ -252,26 +308,6 @@ section.chapter > * {
 }
 .handout .handout-button:hover span {
   transform: scale(1.1);
-}
-/* 채팅 */
-.chat {
-  display: flex;
-  align-items: flex-start;
-}
-
-.portrait {
-  width: 45px;
-  height: 45px;
-  flex-shrink: 0;
-  border-radius: 50%;
-  margin-right: 15px;
-}
-
-p.GM .portrait {
-  background: url(../img/css_sprites.png) -180px 0px;
-}
-p.GM.white .portrait {
-  background: url(../img/css_sprites.png) -135px 0px;
 }
 
 /* 챕터명 */
@@ -472,7 +508,6 @@ div.chapter ul li:first-child {
   opacity: 1;
   transform: translateY(0%);
 }
-
 @media (max-width: 1440px) {
   header {
     visibility: hidden;
