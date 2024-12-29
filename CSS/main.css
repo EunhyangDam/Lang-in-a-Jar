@@ -6,11 +6,748 @@
   font-weight: normal;
   font-style: normal;
 }
+
+@font-face {
+  font-family: "RIDIBatang";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/RIDIBatang.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "NEXON Lv1 Gothic OTF";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
 body {
   font-family: "SUIT-Regular", sans-serif;
+  font-size: 16px;
 }
 .inner {
   width: 100%;
   max-width: 800px;
   margin: 0 auto;
+  text-align: justify;
+  line-height: calc(16px * 1.5);
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "RIDIBatang";
+  font-size: 16px;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  overflow-y: overlay;
+}
+/* 스크롤바 */
+body::-webkit-scrollbar {
+  width: 15px;
+}
+body::-webkit-scrollbar-track {
+  box-shadow: none;
+  background-color: transparent;
+}
+body::-webkit-scrollbar-thumb {
+  outline: none;
+  border-radius: 30px;
+  background-color: var(--primary-color);
+  border: 4px solid transparent;
+}
+body::-webkit-scrollbar-button {
+  width: 0;
+  height: 0;
+}
+
+/* 나비 */
+header {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  z-index: 10;
+  transform: translateY(-50%);
+}
+header nav a {
+  position: relative;
+  display: block;
+  margin: 40px 40px 40px 0px;
+  width: 30px;
+  height: 30px;
+  border: 2.7px solid var(--primary-color);
+  border-radius: 50%;
+}
+header nav a span.circle {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+header nav a.active span.circle {
+  opacity: 1;
+}
+header nav a:hover span.circle {
+  opacity: 1;
+}
+
+header nav a span.nav-text {
+  margin-right: 35px;
+  position: absolute;
+  top: 50%;
+  right: -300%;
+  z-index: -1;
+  transform: translate(0, -50%) scaleX(0%);
+  transform-origin: right;
+  white-space: nowrap;
+  max-width: auto;
+  color: var(--primary-color);
+  background-color: #fff;
+  border-radius: 50px 0 0 50px;
+  box-shadow: 2px 2px rgba(0, 0, 0, 0.3);
+  padding: 0.7rem 5rem 0.7rem 0.8rem;
+  opacity: 0;
+  transition: opacity 0.7s, transform 0.3s;
+}
+
+header nav a.active span.nav-text {
+  opacity: 1;
+  transform: translate(0, -50%) scaleX(100%);
+}
+header nav a:hover span.nav-text {
+  opacity: 1;
+  transform: translate(0, -50%) scaleX(100%);
+}
+header .nav-toggle {
+  display: none;
+}
+
+.inner {
+  max-width: 900px;
+  padding: 40px 40px;
+  margin: 30px auto;
+  backdrop-filter: blur(20px);
+  border: 1px solid #fff;
+  border-radius: 30px;
+  box-shadow: 9px 9px 18px rgba(0, 0, 0, 0.2);
+}
+
+section.chapter > * {
+  padding: 0.7rem 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.intro {
+  text-align: center;
+  color: var(--primary-color);
+  padding-bottom: 1rem;
+}
+
+.session_card {
+  max-height: 600px;
+  margin-bottom: 0.3rem;
+}
+
+/* 음악 */
+.music-container {
+  text-align: center;
+}
+.music-container .music {
+  position: relative;
+  display: inline-flex;
+  flex-direction: row;
+  min-width: 30%;
+  padding: 10px 14px 10px 10px;
+  overflow-x: hidden;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+  text-align: justify;
+  font-family: "NEXON Lv1 Gothic OTF";
+  font-size: 0.8rem;
+  color: var(--secondary-color);
+  transition: color 0.4s, background 0.6s;
+  box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.1);
+}
+.music-container .music:hover {
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.music-container .music::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background-color: var(--primary-color);
+  border-radius: 15px;
+  transform-origin: left;
+  transform: scaleX(0);
+  transition: transform 0.4s;
+}
+.music-container .music:hover::after {
+  transform: scaleX(1);
+}
+
+.music-container .music i {
+  font-size: 25px;
+  background-color: rgba(255, 255, 255, 0.45);
+  padding: 0.5em;
+  margin-right: 10px;
+  border-radius: 15px;
+}
+
+.music-container .music .music-explain {
+  margin: auto 0;
+}
+.music-container .music .music-explain .music-name {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 0.2em;
+}
+
+/* 핸드아웃 */
+.handout {
+  text-align: center;
+  overflow-x: hidden;
+}
+
+.handout .handout-preview {
+  max-height: 45vh;
+}
+
+.handout .handout-button {
+  display: block;
+  margin: 1rem auto 0;
+  padding: 1rem 1.5rem;
+  border: 0.5px solid rgba(255, 255, 255, 0.5);
+  border-radius: 2rem;
+  background: var(--gradient);
+  backdrop-filter: 20px;
+  box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.1),
+    5px 5px 7px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  color: #fff;
+  font-family: "NEXON Lv1 Gothic OTF";
+}
+
+.handout .handout-button span {
+  display: block;
+  font-size: 0.9rem;
+  transform: scale(1);
+  transform-origin: center;
+  transition: transform 0.5s;
+}
+.handout .handout-button:hover span {
+  transform: scale(1.1);
+}
+/* 채팅 */
+.chat {
+  display: flex;
+  align-items: flex-start;
+}
+
+.portrait {
+  width: 45px;
+  height: 45px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+p.GM .portrait {
+  background: url(../img/css_sprites.png) -180px 0px;
+}
+p.GM.white .portrait {
+  background: url(../img/css_sprites.png) -135px 0px;
+}
+
+/* 챕터명 */
+div.chapter {
+  position: relative;
+  padding: 1.2rem 0px 1.7rem 1.2rem;
+  color: var(--primary-color);
+}
+div.chapter::before {
+  content: "";
+  display: block;
+  background-color: var(--primary-color);
+  width: 5px;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+div.chapter h2 {
+  font-size: 1.5rem;
+  position: relative;
+  font-weight: bold;
+  width: 100%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  margin-bottom: 0.4rem;
+}
+
+div.chapter ul li:first-child {
+  font-weight: bold;
+  border-bottom: 1px solid var(--primary-color);
+  /* margin-bottom: 2px; */
+}
+
+/* 주사위 및 안내사항 */
+.dice {
+  text-align: center;
+  color: var(--secondary-color);
+  font-weight: bold;
+}
+.dice span {
+  display: block;
+  margin-bottom: 0.3em;
+}
+.dice span:last-child {
+  margin-bottom: 0;
+}
+.dice.neon span {
+  color: var(--primary-color);
+  text-shadow: 0 0 10px var(--primary-color);
+}
+.dice span.name {
+  font-size: 1.2em;
+}
+.dice span.text {
+  text-align: justify;
+  max-width: 600px;
+  margin: 0 auto 0.3rem;
+}
+.dice span.text:last-of-type {
+  margin: 0 auto;
+}
+
+/* 세션 끊음/재개 시간 */
+.rr-time {
+  text-align: center;
+  color: var(--primary-color);
+  font-weight: bold;
+}
+.rr-time li {
+  margin-bottom: 0.3rem;
+}
+.rr-time li:last-child {
+  margin-bottom: 0;
+}
+.rr-time .notice {
+  font-size: 0.7rem;
+  margin-bottom: -0.2rem;
+}
+
+/* 엔딩 */
+.ending {
+  text-align: center;
+  color: var(--secondary-color);
+  padding: 15px 0;
+  font-size: 0.95rem;
+}
+.ending .ending-name {
+  margin-bottom: 0.5em;
+}
+.ending .ending-name p:first-child {
+  font-size: 0.6rem;
+  margin-bottom: -0.2rem;
+}
+.ending .ending-name p:last-child {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* 크레딧 */
+.credit {
+  color: var(--secondary-color);
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.credit h4 {
+  margin-bottom: 0.8rem;
+}
+.credit h4 .rule_name {
+  font-size: 0.8rem;
+  letter-spacing: 0.15rem;
+  margin-bottom: -0.3rem;
+}
+.credit h4 .scenario_name {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.credit .chara {
+  margin-bottom: 0.6rem;
+}
+.credit .chara li {
+  margin-bottom: 0.2rem;
+}
+.credit .chara p:first-child {
+  font-size: 0.65rem;
+  margin-bottom: -0.4rem;
+}
+.credit .chara p:last-child {
+  font-size: 1.1rem;
+}
+.credit .chara span {
+  font-weight: bold;
+}
+
+.credit .staff {
+  margin-bottom: 0.5rem;
+}
+.credit .staff li {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  text-align: justify;
+  gap: 0 20px;
+  margin-bottom: 2px;
+}
+.credit .staff li p:first-child {
+  text-align: right;
+  font-weight: bold;
+}
+
+.credit h5 {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+.credit h5 i {
+  display: block;
+}
+
+.credit .time {
+  margin-bottom: 0.3rem;
+}
+
+/* 모달 */
+.modal {
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.3s, backdrop-filter 1.5s;
+}
+.modal.active {
+  backdrop-filter: blur(3px);
+  visibility: visible;
+  opacity: 1;
+}
+
+.modal .origin-image {
+  max-width: 95%;
+  max-height: 95vh;
+  opacity: 0;
+  transform: translateY(-20%);
+  transition: transform 0.6s 0.1s, opacity 0.5s 0.1s;
+}
+.modal.active .origin-image {
+  opacity: 1;
+  transform: translateY(0%);
+}
+
+@media (max-width: 1440px) {
+  header {
+    visibility: hidden;
+    top: 0%;
+    right: 0;
+    transform: translate(0%, 0%);
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  header.active {
+    visibility: visible;
+    opacity: 1;
+  }
+  header nav {
+    width: 30vw;
+    height: 100vh;
+    background: var(--primary-color);
+    box-shadow: -8px 0px 20px rgba(0, 0, 0, 0.25);
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    transform: translate(100%, 0%);
+    transition: transform 0.6s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0rem 3rem;
+  }
+  header.active nav {
+    transform: translate(0%, 0%);
+  }
+  header nav a {
+    position: relative;
+    width: auto;
+    height: auto;
+    margin: 0px 0px 2rem 0px;
+    border: none;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-family: "NEXON Lv1 Gothic OTF";
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #fff;
+    border-radius: 0;
+  }
+  header nav a span.circle {
+    display: none;
+    position: relative;
+    top: 0%;
+    left: 0%;
+    transform: none;
+    opacity: 1;
+    transition: 0.3s;
+  }
+
+  header nav a span.nav-text {
+    position: relative;
+    margin-right: 0px;
+    top: 0%;
+    right: 0%;
+    z-index: 0;
+    transform: none;
+    background: none;
+    box-shadow: none;
+    color: #fff;
+    padding: 0;
+    opacity: 1;
+    border-radius: 0px 0 0 0px;
+    transition: opacity 0s, transform 0s;
+  }
+  header nav a span.nav-text::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%) scaleX(0%);
+    transform-origin: left;
+    width: 103%;
+    height: 1px;
+    background: #fff;
+    transition: transform 0.25s;
+  }
+  header nav a.active span.nav-text::after {
+    transform: translateX(-50%) scaleX(100%);
+  }
+  header nav a.active span.nav-text {
+    transform: none;
+    font-style: italic;
+  }
+  header nav a:hover span.nav-text {
+    transform: none;
+  }
+
+  .nav-toggle {
+    display: block;
+    position: fixed;
+    top: 4%;
+    right: 2%;
+    z-index: 9999;
+    width: 33px;
+    height: 33px;
+  }
+  .nav-toggle span {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30px;
+    height: 4px;
+    background-color: var(--primary-color);
+    transform-origin: center;
+    transition: 0.3s;
+  }
+  .nav-toggle span:first-child {
+    top: -10px;
+  }
+  .nav-toggle span:last-child {
+    top: 10px;
+  }
+  .nav-toggle.active span {
+    background-color: #fff;
+    margin: 0;
+  }
+  .nav-toggle.active span:first-child {
+    top: 0px;
+    transform: rotate(45deg);
+  }
+  .nav-toggle.active span:nth-child(2) {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  .nav-toggle.active span:last-child {
+    top: 0px;
+    transform: rotate(-45deg);
+  }
+}
+@media (max-width: 1070px) {
+  header nav {
+    width: 35vw;
+  }
+}
+
+@media (max-width: 950px) {
+  header nav {
+    width: 40vw;
+  }
+
+  .inner {
+    margin: 20px 20px;
+  }
+}
+@media (max-width: 900px) {
+  .credit {
+    width: 100%;
+  }
+}
+
+@media (max-width: 830px) {
+  header nav {
+    width: 45vw;
+  }
+
+  .inner {
+    margin: 20px 20px;
+  }
+}
+
+@media (max-width: 670px) {
+  header nav {
+    width: 50vw;
+  }
+  .handout .handout-button {
+    padding: 0.9rem 1.4rem;
+  }
+}
+
+@media (max-width: 560px) {
+  header nav {
+    width: 60vw;
+  }
+  .handout .handout-button {
+    padding: 0.8rem 1.3rem;
+  }
+}
+
+@media (max-width: 510px) {
+  body {
+    font-family: "Pretendard-Regular";
+  }
+
+  header nav {
+    width: 100vw;
+  }
+
+  .portrait {
+    margin-right: 0.8rem;
+  }
+
+  .name {
+    margin-bottom: 0.15rem;
+  }
+
+  span.line {
+    line-height: 1.4;
+  }
+
+  .credit h4 .rule_name {
+    font-size: 0.7rem;
+    margin-bottom: -0.1rem;
+  }
+  .credit .chara p:first-child {
+    font-size: 0.65rem;
+    margin-bottom: -0.2rem;
+  }
+}
+@media (max-width: 475px) {
+  .inner {
+    max-width: 100%;
+    width: 100%;
+    padding: 1.8rem;
+    margin: 0px;
+    backdrop-filter: blur(20px);
+    border: 1px solid #fff;
+    border-radius: 0px;
+  }
+  button {
+    padding: 0.7rem 1.2rem;
+  }
+  .music-container .music {
+    width: 100%;
+  }
+  .music-container .music .music-explain {
+    width: 80%;
+  }
+  .music-container .music .music-explain .music-name {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 0.1em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+@media (max-width: 370px) {
+  .inner {
+    padding: 1rem;
+  }
+  div.chapter {
+    padding: 0.9rem 0px 1.2rem 1.2rem;
+  }
+}
+@media (max-width: 345px) {
+  .music-container .music .music-explain {
+    width: 75%;
+  }
+}
+@media (max-width: 290px) {
+  html {
+    font-size: 15px;
+  }
+  .inner {
+    padding: 0.8rem;
+  }
+  .music-container .music i {
+    font-size: 20px;
+  }
+  .music-container .music .music-explain {
+    width: 72%;
+  }
+  .portrait {
+    margin-right: 0.7rem;
+  }
 }
