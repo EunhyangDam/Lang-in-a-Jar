@@ -25,7 +25,7 @@ html {
 
 ::selection {
   background-color: var(--primary-color);
-  color: #fff;
+  color: #d9d9d9;
 }
 
 body {
@@ -105,7 +105,7 @@ header nav a span.nav-text {
   white-space: nowrap;
   max-width: auto;
   color: var(--primary-color);
-  background-color: #fff;
+  background-color: #d9d9d9;
   border-radius: 50px 0 0 50px;
   box-shadow: 2px 2px rgba(0, 0, 0, 0.3);
   padding: 0.7rem 5rem 0.7rem 0.8rem;
@@ -124,13 +124,12 @@ header nav a:hover span.nav-text {
 header .nav-toggle {
   display: none;
 }
-
 .inner {
   max-width: 900px;
   padding: 40px 40px;
   margin: 30px auto;
   backdrop-filter: blur(20px);
-  border: 1px solid #fff;
+  border: 1px solid rgba(255, 255, 255, 0.7);
   border-radius: 30px;
   box-shadow: 9px 9px 18px rgba(0, 0, 0, 0.2);
 }
@@ -146,7 +145,8 @@ header .nav-toggle {
     var(--grdient2-color),
     var(--gradient3-color)
   );
-  opacity: 0.15;
+  border-radius: 30px;
+  opacity: 0.2;
   z-index: -1;
 }
 
@@ -176,31 +176,47 @@ section.chapter > * {
   width: 45px;
   height: 45px;
   flex-shrink: 0;
-  border-radius: 50%;
+  border-radius: 15%;
+  border: 1px solid #ffffff10;
+  box-shadow: 1px 3px 4px #00000028;
+  box-sizing: border-box;
   margin-right: 15px;
 }
 
 p.GM .portrait {
-  background: url(../img/sprite.png) 0px 0px;
+  background: url(../img/sprite.png) 0px 0px no-repeat;
 }
 p.do-hyeon .portrait {
-  background: url(../img/sprite.png) -45px 0px;
+  background: url(../img/sprite.png) -46px 0px no-repeat;
 }
 p.luna .portrait {
-  background: url(../img/sprite.png) calc(-45px * 2) 0px;
+  background: url(../img/sprite.png) calc(-45px * 2) 1px no-repeat;
 }
 p.nene .portrait {
-  background: url(../img/sprite.png) calc(-45px * 3) 0px;
+  background: url(../img/sprite.png) calc(-45px * 3) 0px no-repeat;
 }
 p.polus-thirty .portrait {
-  background: url(../img/sprite.png) calc(-45px * 4) 0px;
+  background: url(../img/sprite.png) calc(-45px * 4) 0px no-repeat;
 }
 
 .name {
   font-weight: bold;
   white-space: nowrap;
-  display: block;
   color: var(--secondary-color);
+}
+p.do-hyeon .name {
+  color: #6c2735;
+}
+p.luna .name {
+  color: #d2691e;
+}
+p.polus-thirty .name {
+  color: #22284f;
+}
+p.nene .name {
+  color: #b2aa7a;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 0.2rem;
 }
 
 span.line {
@@ -236,12 +252,12 @@ span.line {
   text-align: justify;
   font-family: "NEXON Lv1 Gothic OTF";
   font-size: 0.8rem;
-  color: var(--secondary-color);
+  color: var(--primary-color);
   transition: color 0.4s, background 0.6s;
   box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.1);
 }
 .music-container .music:hover {
-  color: #fff;
+  color: #d9d9d9;
   background-color: rgba(0, 0, 0, 0);
 }
 
@@ -301,7 +317,7 @@ span.line {
   box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.1),
     5px 5px 7px rgba(0, 0, 0, 0.2);
   cursor: pointer;
-  color: #fff;
+  color: #d9d9d9;
   font-family: "NEXON Lv1 Gothic OTF";
 }
 
@@ -560,7 +576,7 @@ div.chapter ul li:first-child {
     font-family: "NEXON Lv1 Gothic OTF";
     font-weight: 700;
     font-size: 1.5rem;
-    color: #fff;
+    color: #d9d9d9;
     border-radius: 0;
   }
   header nav a span.circle {
@@ -582,7 +598,7 @@ div.chapter ul li:first-child {
     transform: none;
     background: none;
     box-shadow: none;
-    color: #fff;
+    color: #d9d9d9;
     padding: 0;
     opacity: 1;
     border-radius: 0px 0 0 0px;
@@ -598,7 +614,7 @@ div.chapter ul li:first-child {
     transform-origin: left;
     width: 103%;
     height: 1px;
-    background: #fff;
+    background: #d9d9d9;
     transition: transform 0.25s;
   }
   header nav a.active span.nav-text::after {
@@ -639,7 +655,7 @@ div.chapter ul li:first-child {
     top: 10px;
   }
   .nav-toggle.active span {
-    background-color: #fff;
+    background-color: #d9d9d9;
     margin: 0;
   }
   .nav-toggle.active span:first-child {
@@ -741,7 +757,7 @@ div.chapter ul li:first-child {
     padding: 1.8rem;
     margin: 0px;
     backdrop-filter: blur(20px);
-    border: 1px solid #fff;
+    border: 1px solid #d9d9d9;
     border-radius: 0px;
   }
   button {
