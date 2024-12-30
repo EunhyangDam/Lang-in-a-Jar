@@ -23,6 +23,11 @@ html {
   scroll-behavior: smooth;
 }
 
+::selection {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
 body {
   font-family: "RIDIBatang";
   font-size: 16px;
@@ -199,6 +204,7 @@ p.polus-thirty .portrait {
 }
 
 span.line {
+  display: block;
   text-align: justify;
   line-height: 1.3;
 }
