@@ -25,7 +25,7 @@ html {
 
 ::selection {
   background-color: var(--primary-color);
-  color: #d9d9d9;
+  color: #ebebeb;
 }
 
 body {
@@ -105,7 +105,7 @@ header nav a span.nav-text {
   white-space: nowrap;
   max-width: auto;
   color: var(--primary-color);
-  background-color: #d9d9d9;
+  background-color: #ebebeb;
   border-radius: 50px 0 0 50px;
   box-shadow: 2px 2px rgba(0, 0, 0, 0.3);
   padding: 0.7rem 5rem 0.7rem 0.8rem;
@@ -257,7 +257,7 @@ span.line {
   box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.1);
 }
 .music-container .music:hover {
-  color: #d9d9d9;
+  color: #ebebeb;
   background-color: rgba(0, 0, 0, 0);
 }
 
@@ -317,7 +317,7 @@ span.line {
   box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.1),
     5px 5px 7px rgba(0, 0, 0, 0.2);
   cursor: pointer;
-  color: #d9d9d9;
+  color: #ebebeb;
   font-family: "NEXON Lv1 Gothic OTF";
 }
 
@@ -576,7 +576,7 @@ div.chapter ul li:first-child {
     font-family: "NEXON Lv1 Gothic OTF";
     font-weight: 700;
     font-size: 1.5rem;
-    color: #d9d9d9;
+    color: #ebebeb;
     border-radius: 0;
   }
   header nav a span.circle {
@@ -598,7 +598,7 @@ div.chapter ul li:first-child {
     transform: none;
     background: none;
     box-shadow: none;
-    color: #d9d9d9;
+    color: #ebebeb;
     padding: 0;
     opacity: 1;
     border-radius: 0px 0 0 0px;
@@ -614,7 +614,7 @@ div.chapter ul li:first-child {
     transform-origin: left;
     width: 103%;
     height: 1px;
-    background: #d9d9d9;
+    background: #ebebeb;
     transition: transform 0.25s;
   }
   header nav a.active span.nav-text::after {
@@ -655,7 +655,7 @@ div.chapter ul li:first-child {
     top: 10px;
   }
   .nav-toggle.active span {
-    background-color: #d9d9d9;
+    background-color: #ebebeb;
     margin: 0;
   }
   .nav-toggle.active span:first-child {
@@ -757,7 +757,7 @@ div.chapter ul li:first-child {
     padding: 1.8rem;
     margin: 0px;
     backdrop-filter: blur(20px);
-    border: 1px solid #d9d9d9;
+    border: 1px solid #ebebeb;
     border-radius: 0px;
   }
   button {
