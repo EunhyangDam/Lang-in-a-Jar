@@ -235,6 +235,7 @@ span.line {
 .line > span:last-child {
   margin-bottom: 0;
 }
+/* 세션 날짜 */
 
 /* 음악 */
 .music-container {
