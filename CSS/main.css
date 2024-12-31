@@ -214,6 +214,7 @@ section.chapter > * {
 .polus-morning .portrait > div {
   background: url(../img/sprite.png) calc(-45px * 8) 0px no-repeat;
 }
+
 .content {
   display: flex;
   flex-direction: column;
@@ -229,6 +230,7 @@ section.chapter > * {
   padding: 0rem 0.2rem 0.15rem;
   border-radius: 3px;
 }
+/* 색 커스텀 */
 .do-hyeon .name {
   color: #6c2735;
 }
@@ -253,7 +255,9 @@ section.chapter > * {
 .polus-morning .name {
   color: #22284f;
 }
-
+.hannah .name {
+  color: #fbedb2;
+}
 span.line {
   display: block;
   text-align: justify;
