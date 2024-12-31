@@ -198,6 +198,18 @@ p.nene .portrait {
 p.polus-thirty .portrait {
   background: url(../img/sprite.png) calc(-45px * 4) 0px no-repeat;
 }
+p.paddy .portrait {
+  background: url(../img/sprite.png) calc(-45px * 5) 0px no-repeat;
+}
+p.bea .portrait {
+  background: url(../img/sprite.png) calc(-45px * 6) 0px no-repeat;
+}
+p.denny .portrait {
+  background: url(../img/sprite.png) calc(-45px * 7) 0px no-repeat;
+}
+p.polus-morning .portrait {
+  background: url(../img/sprite.png) calc(-45px * 8) 0px no-repeat;
+}
 
 .name {
   font-weight: bold;
@@ -217,6 +229,20 @@ p.nene .name {
   color: #b2aa7a;
   background-color: rgba(0, 0, 0, 0.8);
   padding: 0.2rem;
+}
+p.paddy .name {
+  color: #54513e;
+}
+p.bea .name {
+  color: #ff5722;
+}
+p.denny .name {
+  color: #74a692;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 0.2rem;
+}
+p.polus-morning .name {
+  color: #22284f;
 }
 
 span.line {
