@@ -169,7 +169,6 @@ section.chapter > * {
 /* 채팅 */
 .chat {
   display: flex;
-  align-items: flex-start;
 }
 
 .portrait {
@@ -177,71 +176,81 @@ section.chapter > * {
   height: 45px;
   flex-shrink: 0;
   border-radius: 15%;
-  border: 1px solid #ffffff10;
-  box-shadow: 1px 3px 4px #00000028;
+  background-color: #00000060;
+  border: 1px solid #ffffff46;
+  box-shadow: 1px 3px 4px #00000048;
   box-sizing: border-box;
   margin-right: 15px;
+  overflow: hidden;
 }
-
-p.GM .portrait {
-  background: url(../img/sprite.png) 0px 0px no-repeat;
+.portrait > div {
+  width: 100%;
+  height: 100%;
 }
-p.do-hyeon .portrait {
+.GM .portrait > div {
+  background: url(../img/sprite.png) 0px 0px;
+}
+.do-hyeon .portrait > div {
   background: url(../img/sprite.png) -46px 0px no-repeat;
 }
-p.luna .portrait {
+.luna .portrait > div {
   background: url(../img/sprite.png) calc(-45px * 2) 1px no-repeat;
 }
-p.nene .portrait {
+.nene .portrait > div {
   background: url(../img/sprite.png) calc(-45px * 3) 0px no-repeat;
 }
-p.polus-thirty .portrait {
+.polus-thirty .portrait > div {
   background: url(../img/sprite.png) calc(-45px * 4) 0px no-repeat;
 }
-p.paddy .portrait {
+.paddy .portrait > div {
   background: url(../img/sprite.png) calc(-45px * 5) 0px no-repeat;
 }
-p.bea .portrait {
+.bea .portrait > div {
   background: url(../img/sprite.png) calc(-45px * 6) 0px no-repeat;
 }
-p.denny .portrait {
+.denny .portrait > div {
   background: url(../img/sprite.png) calc(-45px * 7) 0px no-repeat;
 }
-p.polus-morning .portrait {
+.polus-morning .portrait > div {
   background: url(../img/sprite.png) calc(-45px * 8) 0px no-repeat;
 }
-
+.content {
+  display: flex;
+  flex-direction: column;
+}
 .name {
   font-weight: bold;
   white-space: nowrap;
   color: var(--secondary-color);
+  align-self: flex-start;
 }
-p.do-hyeon .name {
+.black-label .name {
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 0rem 0.2rem 0.15rem;
+  border-radius: 3px;
+}
+.do-hyeon .name {
   color: #6c2735;
 }
-p.luna .name {
+.luna .name {
   color: #d2691e;
 }
-p.polus-thirty .name {
+.polus-thirty .name {
   color: #22284f;
 }
-p.nene .name {
+.nene .name {
   color: #b2aa7a;
-  background-color: rgba(0, 0, 0, 0.8);
-  padding: 0.2rem;
 }
-p.paddy .name {
+.paddy .name {
   color: #54513e;
 }
-p.bea .name {
+.bea .name {
   color: #ff5722;
 }
-p.denny .name {
+.denny .name {
   color: #74a692;
-  background-color: rgba(0, 0, 0, 0.8);
-  padding: 0.2rem;
 }
-p.polus-morning .name {
+.polus-morning .name {
   color: #22284f;
 }
 
