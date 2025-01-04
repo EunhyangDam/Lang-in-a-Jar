@@ -261,6 +261,12 @@ section.chapter > * {
 .hannah-past .name {
   color: #fbedb2;
 }
+.pierce .name {
+  color: #daddad;
+}
+.beverly .name {
+  color: #fbedb2;
+}
 
 .line {
   text-align: justify;
