@@ -186,6 +186,7 @@ section.chapter > * {
 .portrait > div {
   width: 100%;
   height: 100%;
+  background: url(../img/sprite.png) calc(-45px * 3) -45px no-repeat;
 }
 .GM .portrait > div {
   background: url(../img/sprite.png) 0px 0px;
@@ -213,6 +214,18 @@ section.chapter > * {
 }
 .polus-morning .portrait > div {
   background: url(../img/sprite.png) calc(-45px * 8) 0px no-repeat;
+}
+.hannah .portrait > div {
+  background: url(../img/sprite.png) calc(-45px * 9) 0px no-repeat;
+}
+.hannah-past .portrait > div {
+  background: url(../img/sprite.png) calc(-45px * 0) -45px no-repeat;
+}
+.pierce .portrait > div {
+  background: url(../img/sprite.png) calc(-45px * 1) -45px no-repeat;
+}
+.beverly .portrait > div {
+  background: url(../img/sprite.png) calc(-45px * 2) -45px no-repeat;
 }
 
 .content {
@@ -267,7 +280,9 @@ section.chapter > * {
 .beverly .name {
   color: #fbedb2;
 }
-
+.jess .name {
+  color: #ffd34f;
+}
 .line {
   text-align: justify;
   line-height: 1.5;
@@ -327,6 +342,7 @@ section.chapter > * {
   display: inline-flex;
   flex-direction: row;
   min-width: 30%;
+  max-width: 100%;
   padding: 10px 14px 10px 10px;
   overflow-x: hidden;
   background-color: rgba(0, 0, 0, 0.2);
@@ -372,6 +388,12 @@ section.chapter > * {
 
 .music-container .music .music-explain {
   margin: auto 0;
+  overflow: hidden;
+}
+.music-container .music .music-explain p {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .music-container .music .music-explain .music-name {
   font-size: 1.05rem;
@@ -392,7 +414,7 @@ section.chapter > * {
 .handout .handout-button {
   display: block;
   margin: 1rem auto 0;
-  padding: 1rem 1.5rem;
+  padding: 0.8rem 1.3rem;
   border: 0.5px solid rgba(255, 255, 255, 0.5);
   border-radius: 2rem;
   background: var(--gradient);
@@ -839,9 +861,6 @@ div.chapter ul li:first-child {
     font-size: 1rem;
     font-weight: 700;
     margin-bottom: 0.1em;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
   }
 }
 @media (max-width: 370px) {
