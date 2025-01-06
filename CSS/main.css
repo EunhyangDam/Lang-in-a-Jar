@@ -30,7 +30,9 @@ html {
 }
 
 body {
-  font-family: "RIDIBatang";
+  font-family: "RIDIBatang", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
   font-size: 16px;
   background-size: cover;
   background-position: center;
@@ -189,6 +191,8 @@ section.chapter > * {
   height: 100%;
   background: url(../img/sprite.png) calc(-45px * 3) -45px no-repeat;
 }
+
+/* 캐릭터 포트레잇 */
 .GM .portrait > div {
   background: url(../img/sprite.png) 0px 0px;
 }
@@ -228,6 +232,36 @@ section.chapter > * {
 .beverly .portrait > div {
   background: url(../img/sprite.png) calc(-45px * 2) -45px no-repeat;
 }
+.paddy-forty .portrait > div {
+  background: url(../img/sprite.png) calc(-45px * 4) -45px no-repeat;
+}
+.bea-forty .portrait > div {
+  background: url(../img/sprite.png) calc(-45px * 5) -45px no-repeat;
+}
+.jess .portrait > div {
+  background: url(../img/sprite.png) calc(-45px * 6) -45px no-repeat;
+}
+.kwas .portrait > div {
+  background: url(../img/sprite.png) calc(-45px * 7) -45px no-repeat;
+}
+.nura .portrait > div {
+  background: url(../img/sprite.png) calc(-45px * 8) -45px no-repeat;
+}
+.issy-morning .portrait > div {
+  background: url(../img/sprite.png) calc(-45px * 9) -45px no-repeat;
+}
+.issy .portrait > div {
+  background: url(../img/sprite.png) calc(-45px * 0) calc(-45px * 2) no-repeat;
+}
+.mary .portrait > div {
+  background: url(../img/sprite.png) calc(-45px * 1) calc(-45px * 2) no-repeat;
+}
+.amber .portrait > div {
+  background: url(../img/sprite.png) calc(-45px * 2) calc(-45px * 2) no-repeat;
+}
+.amber-twenty .portrait > div {
+  background: url(../img/sprite.png) calc(-45px * 3) calc(-45px * 2) no-repeat;
+}
 
 .content {
   display: flex;
@@ -244,30 +278,31 @@ section.chapter > * {
   padding: 0rem 0.2rem 0.15rem;
   border-radius: 3px;
 }
-/* 색 커스텀 */
+
+/* 캐릭터 퍼스널 컬러 */
 .do-hyeon .name {
   color: #6c2735;
 }
 .luna .name {
   color: #d2691e;
 }
-.polus-thirty .name {
+.polus-thirty .name,
+.polus-morning .name {
   color: #22284f;
 }
 .nene .name {
   color: #b2aa7a;
 }
-.paddy .name {
+.paddy .name,
+.paddy-forty .name {
   color: #54513e;
 }
-.bea .name {
+.bea .name,
+.bea-forty .name {
   color: #ff5722;
 }
 .denny .name {
   color: #74a692;
-}
-.polus-morning .name {
-  color: #22284f;
 }
 .hannah .name {
   color: #fbedb2;
@@ -284,6 +319,23 @@ section.chapter > * {
 .jess .name {
   color: #ffd34f;
 }
+.kwas .name {
+  color: #746ca0;
+}
+.nura .name {
+  color: #dc663b;
+}
+.issy-morning .name,
+.issy .name {
+  color: #4c4964;
+}
+.mary .name {
+  color: #556e83;
+}
+.amber .name,
+.amber-twenty .name {
+  color: #6ca178;
+}
 .line {
   text-align: justify;
   line-height: 1.5;
@@ -299,6 +351,7 @@ section.chapter > * {
   flex-direction: column;
   text-align: center;
   color: #ececec;
+  text-transform: uppercase;
 }
 .date p:first-child {
   align-self: center;
@@ -309,7 +362,8 @@ section.chapter > * {
   margin-bottom: 0.3rem;
 }
 .date p:last-child {
-  font-family: "SUIT-Regular";
+  font-size: 0.85rem;
+  font-family: "NEXON Lv1 Gothic OTF", Arial, Helvetica, sans-serif;
 }
 .date p span {
   color: var(--primary-color);
@@ -811,7 +865,9 @@ div.chapter ul li:first-child {
 
 @media (max-width: 510px) {
   body {
-    font-family: "SUIT-Regular";
+    font-family: "SUIT-Regular", system-ui, -apple-system, BlinkMacSystemFont,
+      "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+      "Helvetica Neue", sans-serif;
   }
 
   header nav {
@@ -826,6 +882,11 @@ div.chapter ul li:first-child {
     margin-bottom: 0.15rem;
   }
 
+  .black-label .name {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 0.15rem 0.25rem 0.15rem;
+    border-radius: 3px;
+  }
   .line {
     line-height: 1.4;
   }
