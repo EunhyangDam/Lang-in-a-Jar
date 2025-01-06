@@ -13,12 +13,13 @@
   font-style: normal;
 }
 @font-face {
-  font-family: "Pretendard-Regular";
-  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
-    format("woff");
-  font-weight: 400;
+  font-family: "SUIT-Regular";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Regular.woff2")
+    format("woff2");
+  font-weight: normal;
   font-style: normal;
 }
+
 html {
   scroll-behavior: smooth;
 }
@@ -308,7 +309,7 @@ section.chapter > * {
   margin-bottom: 0.3rem;
 }
 .date p:last-child {
-  font-family: "Pretendard-Regular";
+  font-family: "SUIT-Regular";
 }
 .date p span {
   color: var(--primary-color);
@@ -321,7 +322,7 @@ section.chapter > * {
 
 /* 시나리오 내 시간 */
 .time {
-  font-family: "Pretendard-Regular";
+  font-family: "SUIT-Regular";
   font-weight: bold;
   display: flex;
   justify-content: center;
@@ -810,7 +811,7 @@ div.chapter ul li:first-child {
 
 @media (max-width: 510px) {
   body {
-    font-family: "Pretendard-Regular";
+    font-family: "SUIT-Regular";
   }
 
   header nav {
