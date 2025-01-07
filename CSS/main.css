@@ -127,14 +127,16 @@ header nav a:hover span.nav-text {
 header .nav-toggle {
   display: none;
 }
+
 .inner {
   max-width: 900px;
   padding: 40px 40px;
   margin: 30px auto;
-  backdrop-filter: blur(20px);
+  backdrop-filter: blur(30px);
   border: 1px solid rgba(255, 255, 255, 0.7);
   border-radius: 30px;
   box-shadow: 9px 9px 18px rgba(0, 0, 0, 0.2);
+  background-color: #ffffff0f;
 }
 .inner::before {
   content: "";
@@ -357,6 +359,53 @@ section.chapter > * {
   color: var(--primary-color);
 }
 
+/* 강조 지문 */
+.chat.emphasis {
+  justify-content: center;
+}
+.chat.emphasis p.line {
+  text-align: center;
+  color: #000;
+  text-shadow: 0 0 10px var(--primary-color);
+}
+
+/* 시스템 */
+.system {
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.system .system-container {
+  font-family: "NEXON Lv1 Gothic OTF";
+  font-size: 0.95rem;
+  display: flex;
+  width: fit-content;
+  margin: 0 auto;
+  flex-direction: column;
+  align-items: center;
+  background: #fff;
+  padding: 0.4rem 1.5rem;
+  border-radius: 7px;
+  box-shadow: 3px 3px 1px rgba(0, 0, 0, 0.1);
+}
+.system li.system-name {
+  margin-bottom: 0.4rem;
+  font-weight: bold;
+}
+.system li.system-status {
+  font-size: 0.65rem;
+}
+.system li.system-value {
+  margin-top: -0.1rem;
+  color: #0000007c;
+  margin-bottom: 0.4rem;
+}
+.system li.system-value span {
+  font-weight: bold;
+  color: var(--primary-color);
+}
+.system li.system-value:last-of-type {
+  margin-bottom: 0;
+}
 /* 세션 날짜 */
 .date {
   display: flex;
@@ -392,9 +441,9 @@ section.chapter > * {
   font-weight: bold;
   display: flex;
   justify-content: center;
+  align-items: flex-start;
 }
 .time span {
-  align-self: center;
   background-color: #ececec;
   border-radius: 10px;
   padding: 0.4rem 0.9rem;
@@ -539,35 +588,6 @@ div.chapter ul li:first-child {
   /* margin-bottom: 2px; */
 }
 
-/* 주사위 및 안내사항 */
-.dice {
-  text-align: center;
-  color: var(--secondary-color);
-  font-weight: bold;
-}
-.dice span {
-  display: block;
-  margin-bottom: 0.3em;
-}
-.dice span:last-child {
-  margin-bottom: 0;
-}
-.dice.neon span {
-  color: var(--primary-color);
-  text-shadow: 0 0 10px var(--primary-color);
-}
-.dice span.name {
-  font-size: 1.2em;
-}
-.dice span.text {
-  text-align: justify;
-  max-width: 600px;
-  margin: 0 auto 0.3rem;
-}
-.dice span.text:last-of-type {
-  margin: 0 auto;
-}
-
 /* 엔딩 */
 .ending {
   text-align: center;
@@ -585,6 +605,20 @@ div.chapter ul li:first-child {
 .ending .ending-name p:last-child {
   font-size: 1.2rem;
   font-weight: bold;
+}
+.ending .reward {
+  margin-bottom: 0.8rem;
+}
+.ending .reward:last-of-type {
+  margin-bottom: 0;
+}
+.ending .reward p.reward-name {
+  font-size: 1.01rem;
+  font-weight: bold;
+}
+.ending .reward p.reward-description {
+  max-width: 70%;
+  margin: 0 auto;
 }
 
 /* 크레딧 */
