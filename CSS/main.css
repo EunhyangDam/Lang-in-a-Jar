@@ -262,6 +262,18 @@ section.chapter > * {
 .amber-twenty .portrait > div {
   background: url(../img/sprite.png) calc(-45px * 3) calc(-45px * 2) no-repeat;
 }
+.denny-record .portrait > div {
+  background: url(../img/sprite.png) calc(-45px * 4) calc(-45px * 2) no-repeat;
+}
+.polus-record .portrait > div {
+  background: url(../img/sprite.png) calc(-45px * 5) calc(-45px * 2) no-repeat;
+}
+.kwas-record .portrait > div {
+  background: url(../img/sprite.png) calc(-45px * 6) calc(-45px * 2) no-repeat;
+}
+.henrique-record .portrait > div {
+  background: url(../img/sprite.png) calc(-45px * 7) calc(-45px * 2) no-repeat;
+}
 
 .content {
   display: flex;
