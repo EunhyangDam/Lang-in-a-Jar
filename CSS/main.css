@@ -359,15 +359,61 @@ section.chapter > * {
   color: var(--primary-color);
 }
 
+/* 챕터명 */
+div.chapter {
+  position: relative;
+  padding: 1.2rem 0px 1.7rem 1.2rem;
+  color: var(--primary-color);
+}
+div.chapter::before {
+  content: "";
+  display: block;
+  background-color: var(--primary-color);
+  width: 5px;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+div.chapter h2 {
+  font-size: 1.5rem;
+  position: relative;
+  font-weight: bold;
+  width: 100%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  margin-bottom: 0.4rem;
+}
+
+div.chapter ul li:first-child {
+  font-weight: bold;
+  border-bottom: 1px solid var(--primary-color);
+  /* margin-bottom: 2px; */
+}
+
 /* 강조 지문 */
 .chat.emphasis {
-  justify-content: center;
+  flex-direction: column;
+  align-content: center;
+}
+.chat.emphasis.insanity {
+  background-color: #00000044;
+  padding: 2%;
 }
 .chat.emphasis p.line {
   text-align: center;
   color: #fff;
-  text-shadow: 0 0 1px #fff, 0 0 5px var(--primary-color),
-    0 0 10px var(--primary-color), 0 0 15px var(--secondary-color);
+  text-shadow: 0 0 1px #fff, 0 0 3px var(--primary-color),
+    0 0 5px var(--primary-color), 0 0 10px var(--secondary-color),
+    0 0 15px var(--secondary-color);
+}
+.chat.emphasis.insanity p.line {
+  color: #000;
+  text-shadow: 0 0 1px #000, 0 0 3px red, 0 0 5px red, 0 0 10px #750800,
+    0 0 15px #750800, 0 0 30px #750800;
 }
 
 /* 시스템 */
@@ -612,41 +658,6 @@ section.chapter > * {
   transform: scale(1.1);
 }
 
-/* 챕터명 */
-div.chapter {
-  position: relative;
-  padding: 1.2rem 0px 1.7rem 1.2rem;
-  color: var(--primary-color);
-}
-div.chapter::before {
-  content: "";
-  display: block;
-  background-color: var(--primary-color);
-  width: 5px;
-  height: 100%;
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
-}
-
-div.chapter h2 {
-  font-size: 1.5rem;
-  position: relative;
-  font-weight: bold;
-  width: 100%;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  margin-bottom: 0.4rem;
-}
-
-div.chapter ul li:first-child {
-  font-weight: bold;
-  border-bottom: 1px solid var(--primary-color);
-  /* margin-bottom: 2px; */
-}
-
 /* 엔딩 */
 .ending {
   text-align: center;
@@ -682,10 +693,9 @@ div.chapter ul li:first-child {
 
 /* 크레딧 */
 .credit {
-  color: var(--secondary-color);
-  margin: 0 auto;
+  color: var(--primary-color);
   text-align: center;
-  margin-top: 2rem;
+  padding: 2rem 0 !important;
 }
 
 .credit h4 {
@@ -716,6 +726,27 @@ div.chapter ul li:first-child {
 }
 .credit .chara span {
   font-weight: bold;
+}
+.credit .skills {
+  display: flex;
+  justify-content: space-around;
+}
+.credit .skills .skill-section {
+  display: flex;
+  gap: 1rem;
+}
+.credit .skills .skill-section ul {
+  text-align: left;
+  margin-bottom: 0.1rem;
+}
+.credit .skills .skill-section .skill-chara {
+  font-weight: bold;
+}
+.credit .skills .skill-section .skill-chara {
+  text-align: right;
+}
+.credit .skills .skill-section .skill-name {
+  margin-bottom: 0.2rem;
 }
 
 .credit .staff {
@@ -1003,6 +1034,17 @@ div.chapter ul li:first-child {
   .credit .chara p:first-child {
     font-size: 0.65rem;
     margin-bottom: -0.2rem;
+  }
+  .credit .skills .skill-section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+  }
+  .credit .skills .skill-section .skill-chara {
+    text-align: center;
+  }
+  .credit .skills .skill-section ul {
+    text-align: center;
   }
 }
 @media (max-width: 475px) {
