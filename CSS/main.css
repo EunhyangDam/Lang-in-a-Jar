@@ -26,7 +26,7 @@ html {
 
 ::selection {
   background-color: var(--primary-color);
-  color: #ebebeb;
+  color: #ececec;
 }
 
 body {
@@ -108,7 +108,7 @@ header nav a span.nav-text {
   white-space: nowrap;
   max-width: auto;
   color: var(--primary-color);
-  background-color: #ebebeb;
+  background-color: #ececec;
   border-radius: 50px 0 0 50px;
   box-shadow: 2px 2px rgba(0, 0, 0, 0.3);
   padding: 0.7rem 5rem 0.7rem 0.8rem;
@@ -138,6 +138,7 @@ header .nav-toggle {
   box-shadow: 9px 9px 18px rgba(0, 0, 0, 0.2);
   background-color: #ffffff0f;
 }
+
 .inner::before {
   content: "";
   position: absolute;
@@ -158,6 +159,10 @@ header .nav-toggle {
 section.chapter > * {
   padding: 0.7rem 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+section.chapter:last-of-type > *:last-of-type {
+  border-bottom: none;
+  padding-bottom: 0;
 }
 
 .intro {
@@ -577,7 +582,7 @@ div.chapter ul li:first-child {
 }
 
 .music-container .music:hover {
-  color: #ebebeb;
+  color: #ececec;
   background-color: rgba(0, 0, 0, 0);
 }
 
@@ -643,7 +648,7 @@ div.chapter ul li:first-child {
   box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.1),
     5px 5px 7px rgba(0, 0, 0, 0.2);
   cursor: pointer;
-  color: #ebebeb;
+  color: #ececec;
   font-family: "NEXON Lv1 Gothic OTF";
 }
 
@@ -656,6 +661,14 @@ div.chapter ul li:first-child {
 }
 .handout .handout-button:hover span {
   transform: scale(1.1);
+}
+.handout.text .handout-container {
+  width: fit-content;
+  max-width: 70%;
+  margin: 0 auto;
+  background: #ececec;
+  padding: 0.8rem 1.5rem;
+  border-radius: 7.5px;
 }
 
 /* 엔딩 */
@@ -692,10 +705,10 @@ div.chapter ul li:first-child {
 }
 
 /* 크레딧 */
-.credit {
+div.credit {
   color: var(--primary-color);
   text-align: center;
-  padding: 2rem 0 !important;
+  padding: 2rem 0;
 }
 
 .credit h4 {
@@ -809,6 +822,7 @@ div.chapter ul li:first-child {
   opacity: 1;
   transform: translateY(0%);
 }
+
 @media (max-width: 1440px) {
   header {
     visibility: hidden;
@@ -855,7 +869,7 @@ div.chapter ul li:first-child {
     font-family: "NEXON Lv1 Gothic OTF";
     font-weight: 700;
     font-size: 1.5rem;
-    color: #ebebeb;
+    color: #ececec;
     border-radius: 0;
   }
   header nav a span.circle {
@@ -877,7 +891,7 @@ div.chapter ul li:first-child {
     transform: none;
     background: none;
     box-shadow: none;
-    color: #ebebeb;
+    color: #ececec;
     padding: 0;
     opacity: 1;
     border-radius: 0px 0 0 0px;
@@ -893,7 +907,7 @@ div.chapter ul li:first-child {
     transform-origin: left;
     width: 103%;
     height: 1px;
-    background: #ebebeb;
+    background: #ececec;
     transition: transform 0.25s;
   }
   header nav a.active span.nav-text::after {
@@ -934,7 +948,7 @@ div.chapter ul li:first-child {
     top: 10px;
   }
   .nav-toggle.active span {
-    background-color: #ebebeb;
+    background-color: #ececec;
     margin: 0;
   }
   .nav-toggle.active span:first-child {
@@ -1054,7 +1068,7 @@ div.chapter ul li:first-child {
     padding: 1.8rem;
     margin: 0px;
     backdrop-filter: blur(20px);
-    border: 1px solid #ebebeb;
+    border: 1px solid #ececec;
     border-radius: 0px;
   }
 
