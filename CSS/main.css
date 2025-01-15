@@ -555,6 +555,7 @@ div.chapter ul li:first-child {
 }
 .time span {
   background-color: #ececec;
+  box-shadow: 3px 3px 1px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   padding: 0.4rem 0.9rem;
 }
@@ -667,10 +668,16 @@ div.chapter ul li:first-child {
   max-width: 70%;
   margin: 0 auto;
   background: #ececec;
+  box-shadow: 3px 3px 1px rgba(0, 0, 0, 0.1);
   padding: 0.8rem 1.5rem;
   border-radius: 7.5px;
 }
-
+.handout.text .handout-container .handout-name {
+  color: var(--primary-color);
+  font-weight: bold;
+  font-size: 1.05rem;
+  margin-bottom: 0.5rem;
+}
 /* 엔딩 */
 .ending {
   text-align: center;
