@@ -634,6 +634,10 @@ div.chapter ul li:first-child {
   overflow-x: hidden;
 }
 
+.handout.text.justify .handout-container {
+  text-align: justify;
+}
+
 .handout .handout-preview {
   max-height: 45vh;
 }
@@ -672,12 +676,20 @@ div.chapter ul li:first-child {
   padding: 0.8rem 1.5rem;
   border-radius: 7.5px;
 }
+
+.handout.text .handout-container p {
+  margin-bottom: 0.2rem;
+}
+.handout.text .handout-container p:last-of-type {
+  margin-bottom: 0;
+}
 .handout.text .handout-container .handout-name {
   color: var(--primary-color);
   font-weight: bold;
   font-size: 1.05rem;
   margin-bottom: 0.5rem;
 }
+
 /* 엔딩 */
 .ending {
   text-align: center;
@@ -730,8 +742,7 @@ div.credit {
   font-size: 1.8rem;
   font-weight: bold;
 }
-
-.credit .chara {
+.credit ul {
   margin-bottom: 0.6rem;
 }
 .credit .chara li {
@@ -747,6 +758,7 @@ div.credit {
 .credit .chara span {
   font-weight: bold;
 }
+
 .credit .skills {
   display: flex;
   justify-content: space-around;
@@ -769,9 +781,6 @@ div.credit {
   margin-bottom: 0.2rem;
 }
 
-.credit .staff {
-  margin-bottom: 0.5rem;
-}
 .credit .staff li {
   display: grid;
   grid-template-columns: 1fr 1fr;
